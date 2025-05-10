@@ -1,0 +1,183 @@
+/* Общие стили */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f4faff;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #1c90d4;
+  margin: 30px 0 20px;
+}
+
+/* Хедер */
+.header-centered {
+  background: #4dbcfb;
+  padding: 16px 30px;
+}
+
+.header-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+  opacity: 0.85;
+}
+
+/* Кнопка "Список учеников" */
+.header-center a:last-child {
+  background: #fff;
+  color: #4dbcfb;
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.header-center a:last-child:hover {
+  background: #e0f5ff;
+  color: #1c90d4;
+}
+
+/* Контейнер формы */
+.form-container {
+  max-width: 800px;
+  margin: 20px auto 60px;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: 500;
+}
+
+input[type="date"],
+input[type="time"] {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #4dbcfb;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #1c90d4;
+  transform: scale(1.02);
+}
+
+/* Сетка предметов */
+.lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-items: center;
+}
+
+.logo-item {
+  background: #f0f8ff;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 8px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.logo-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.logo-item:hover,
+.logo-item.active {
+  border-color: #4dbcfb;
+  box-shadow: 0 0 10px rgba(77, 188, 251, 0.3);
+}
+
+/* Список слотов */
+.slot-list {
+  margin-top: 30px;
+}
+
+.slot {
+  background: #e9f7fe;
+  border-left: 5px solid #4dbcfb;
+  padding: 14px 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.slot span {
+  color: #333;
+}
+
+.delete-btn {
+  background: #ff5c5c;
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #e54848;
+}
+
+/* Адаптация */
+@media (max-width: 600px) {
+  .header-center {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .lesson-grid {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  }
+
+  .slot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

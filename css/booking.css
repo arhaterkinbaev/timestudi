@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f9fcff;
+  color: #333;
+}
+
+.header {
+  background: #45b9f3;
+  padding: 20px;
+  text-align: center;
+}
+
+.header .logo a {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.booking-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 150, 255, 0.1);
+}
+
+.booking-container h1 {
+  text-align: center;
+  color: #2e98db;
+  margin-bottom: 30px;
+}
+
+.teacher-select {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.teacher-select select {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.slots-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.slot-card {
+  background: #ffffff;
+  border: 2px solid #d6ecfa;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 140, 200, 0.08);
+  transition: transform 0.2s;
+}
+
+.slot-card:hover {
+  transform: translateY(-4px);
+}
+
+.slot-card .slot-info {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.slot-card button {
+  background: #45b9f3;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.slot-card button:hover {
+  background: #2e98db;
+}
+
+/* Блок моих записей */
+.my-bookings {
+  background: #f6fbff;
+  padding: 40px 20px;
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.my-bookings h2 {
+  color: #2e98db;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.booking-card {
+  background: #ffffff;
+  border: 2px solid #d6ecfa;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0, 140, 200, 0.08);
+  transition: transform 0.2s;
+}
+
+.booking-card:hover {
+  transform: translateY(-4px);
+}
+
+.booking-card .teacher {
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.booking-card .subject {
+  color: #2e98db;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.booking-card .datetime {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.booking-card .cancel-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.booking-card .cancel-btn:hover {
+  background: #e63946;
+}

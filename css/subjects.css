@@ -1,0 +1,168 @@
+/* Базовые стили */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    color: #333;
+  }
+  
+  .container-subjects {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Список предметов */
+  .subjects-list {
+    flex: 1;
+    margin-right: 40px;
+  }
+  
+  .subjects-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .subjects-list li {
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .subjects-list li:hover {
+    color: #6C63FF;
+    transform: translateX(8px);
+  }
+  
+  .icon {
+    margin-right: 12px;
+    font-size: 24px;
+  }
+  
+  /* Карточка преподавателя */
+  .teacher-card {
+    flex: 2;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 1;
+  }
+  
+  .teacher-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .teacher-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .teacher-card h2 {
+    margin: 10px 0;
+    color: #6C63FF;
+  }
+  
+  .teacher-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .stats div {
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  /* Кнопка подробнее */
+  .more-btn {
+    margin-top: 10px;
+    padding: 12px 25px;
+    background: #6C63FF;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .more-btn:hover {
+    background: #8E7CFF;
+    transform: scale(1.05);
+  }
+  
+  /* Заглушка "Учитель не доступен" */
+  .no-teacher {
+    text-align: center;
+    background: #f0f0f0;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+  
+  .no-teacher h2 {
+    margin-bottom: 15px;
+    color: #6C63FF;
+  }
+  
+  .no-teacher p {
+    color: #555;
+    font-size: 16px;
+  }
+  
+  /* Футер */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background: #f2f2f2;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Мобильная адаптация */
+  @media (max-width: 768px) {
+    .container-subjects {
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+  
+    .subjects-list {
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+  
+    .teacher-card {
+      width: 100%;
+    }
+  
+    .stats {
+      gap: 20px;
+    }
+  }
+  

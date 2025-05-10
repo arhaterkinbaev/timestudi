@@ -1,0 +1,154 @@
+/* Базовый стиль страницы */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Хедер */
+  .header {
+    background: rgb(9, 185, 244);
+    padding: 20px 0;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    display: inline-block;
+  }
+  
+  .nav {
+    float: right;
+  }
+  
+  .nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav a:hover {
+    color: #d1d0f7;
+  }
+  
+  .nav .active {
+    text-decoration: underline;
+  }
+  
+  /* Основной раздел FAQ */
+  .faq {
+    padding: 80px 20px;
+  }
+  
+  .faq h1 {
+    text-align: center;
+    color: rgb(9, 185, 244);
+    margin-bottom: 40px;
+  }
+  
+  /* Поле поиска */
+  #faq-search {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto 40px auto;
+    padding: 15px;
+    border: 2px solid rgb(9, 185, 244);
+    border-radius: 30px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  #faq-search:focus {
+    border-color: #8E7CFF;
+    outline: none;
+  }
+  
+  /* Список вопросов */
+  #faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Блок вопрос+ответ */
+  .faq-item {
+    background: #f9f9f9;
+    padding: 20px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .faq-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Вопрос */
+  .faq-question {
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+    position: relative;
+    padding-right: 30px;
+  }
+  
+  /* Плюсик/минусик */
+  .faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 24px;
+    transition: transform 0.3s;
+  }
+  
+  .faq-question.active::after {
+    content: '-';
+    transform: rotate(180deg);
+  }
+  
+  /* Ответ */
+  .faq-answer {
+    font-size: 16px;
+    color: #555;
+    margin-top: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  /* Когда активный */
+  .faq-answer.show {
+    max-height: 500px; /* достаточно для текста */
+  }
+  
+  /* Футер */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background: #f2f2f2;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Мобильная адаптация */
+  @media (max-width: 768px) {
+    .nav {
+      float: none;
+      text-align: center;
+    }
+  }
+  

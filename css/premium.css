@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fd;
+    color: #333;
+  }
+  
+  .header, .footer {
+    background: #6C63FF;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .nav {
+    margin-top: 10px;
+  }
+  
+  .pricing {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .pricing h1 {
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #6C63FF;
+  }
+  
+  .pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background: #6C63FF; /* Изначально фиолетовый */
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 300px;
+    transition: all 0.4s ease;
+    color: #fff;
+  }
+  
+  .card h2, .card .price, .card ul li {
+    color: #fff;
+  }
+  
+  .card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .card ul li {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  /* Все кнопки */
+  button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    background: #fff;
+    color: #6C63FF;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  /* Эффект наведения на разные карточки */
+  .card:nth-child(1):hover {
+    background: #fff;
+    color: #333;
+  }
+  .card:nth-child(1):hover h2,
+  .card:nth-child(1):hover .price,
+  .card:nth-child(1):hover ul li {
+    color: #333;
+  }
+  
+  .card:nth-child(2):hover {
+    background: #ccc;
+    color: #333;
+  }
+  .card:nth-child(2):hover h2,
+  .card:nth-child(2):hover .price,
+  .card:nth-child(2):hover ul li {
+    color: #333;
+  }
+  
+  .card:nth-child(3):hover {
+    background: #ffd700; /* Золотой */
+    color: #333;
+  }
+  .card:nth-child(3):hover h2,
+  .card:nth-child(3):hover .price,
+  .card:nth-child(3):hover ul li {
+    color: #333;
+  }
+  
+  /* Кнопки при наведении */
+  button:hover {
+    background: #d1d0f7;
+    color: #6C63FF;
+  }
+  

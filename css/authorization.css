@@ -1,0 +1,172 @@
+/* Базовый фон страницы */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #ffffff;
+  padding: 40px 20px;
+}
+
+/* Блок логотипа */
+.auth-logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-logo {
+  width: 100px;
+  height: auto;
+  animation: fadeIn 1s ease;
+}
+
+/* Блок формы */
+.auth-form {
+  background: linear-gradient(to right, rgb(9, 185, 244), #b6eaff);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: slideUp 1s ease;
+}
+
+/* Заголовок */
+.auth-form h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #ffffff;
+}
+
+/* Поля ввода */
+.auth-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #f5fafd;
+  color: #333;
+  transition: box-shadow 0.3s;
+  outline: none;
+}
+
+.auth-form input:focus {
+  box-shadow: 0 0 8px rgba(9, 185, 244, 0.6);
+}
+
+/* Основная кнопка (Регистрация/Вход) */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  background: #ffffff;
+  color: rgb(9, 185, 244);
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+  background: rgb(9, 185, 244);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Социальные кнопки */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.google-btn, .facebook-btn {
+  flex: 1;
+  padding: 10px;
+  background: #f0faff;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.google-btn:hover, .facebook-btn:hover {
+  background: #e0f4ff;
+  transform: scale(1.03);
+}
+
+/* Выбор роли */
+.role-select {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.role-btn {
+  flex: 1;
+  padding: 10px;
+  background: #ffffff;
+  color: rgb(9, 185, 244);
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.role-btn:hover {
+  background: rgb(9, 185, 244);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Текст выбранной роли */
+.selected-role-text {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Ссылка Вход/Регистрация */
+.auth-link {
+  display: block;
+  margin-top: 15px;
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 500px) {
+  .auth-form {
+    padding: 30px 20px;
+  }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}

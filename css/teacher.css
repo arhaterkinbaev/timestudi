@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: #333;
+}
+
+.header {
+  background: #65c0fa;
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.schedule-btn {
+  background: #fff;
+  color: #65c0fa;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.schedule-btn:hover {
+  background: #f0f8ff;
+  color: #42a5dc;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.title {
+  text-align: center;
+  color: #1ba3e3;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.booking-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.booking-card {
+  background: #f0faff;
+  border-left: 5px solid #1ba3e3;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-size: 16px;
+}
