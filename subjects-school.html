@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Школьные предметы — TimeStudy</title>
+  <link rel="stylesheet" href="css/subjects.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+
+<header class="header">
+  <div class="container">
+    <div class="logo">TIMESTUDY</div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О проекте</a>
+      <a href="faq.html">FAQ</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="contact.html">Контакты</a>
+      <span id="user-info"></span>
+    </nav>
+  </div>
+</header>
+
+<section class="subjects">
+  <div class="container-subjects">
+
+    <!-- Список предметов -->
+    <div class="subjects-list">
+      <ul>
+        <li onclick="updateTeacherCard('math')"><span class="icon">📐</span> Математика</li>
+        <li onclick="updateTeacherCard('physics')"><span class="icon">⚡</span> Физика</li>
+        <li onclick="updateTeacherCard('chemistry')"><span class="icon">🧪</span> Химия</li>
+        <li onclick="updateTeacherCard('biology')"><span class="icon">🌱</span> Биология</li>
+        <li onclick="updateTeacherCard('history')"><span class="icon">📚</span> История</li>
+      </ul>
+    </div>
+
+    <!-- Карточка преподавателя -->
+    <div class="teacher-card" id="teacher-card">
+      <img src="media/teacher1.jpg" alt="Преподаватель" class="teacher-photo">
+      <h2>Ербол Ержанов</h2>
+      <p>Преподаёт профильную математику и физику на высоком уровне.</p>
+      <div class="stats">
+        <div><strong>10 лет</strong> опыта</div>
+        <div><strong>30</strong> учеников с отличием</div>
+        <div><strong>20</strong> подготовленных стобалльников</div>
+      </div>
+      <button class="more-btn" onclick="location.href='chat-erbol.html'">Связаться</button>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 TIMESTUDY. Все права защищены.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+<!-- Скрипт смены карточки -->
+<script>
+  function updateTeacherCard(subject) {
+    const card = document.getElementById('teacher-card');
+  
+    if (subject === 'math' || subject === 'physics') {
+      card.innerHTML = `
+        <img src="media/teacher1.jpg" alt="Преподаватель" class="teacher-photo">
+        <h2>Ербол Ержанов</h2>
+        <p>Преподаёт профильную математику и физику на высоком уровне.</p>
+        <div class="stats">
+          <div><strong>10 лет</strong> опыта</div>
+          <div><strong>30</strong> учеников с отличием</div>
+          <div><strong>20</strong> подготовленных стобалльников</div>
+        </div>
+       <button class="more-btn" onclick="location.href='chat-erbol.html'">Связаться</button>
+      `;
+    } else if (subject === 'history') {
+      card.innerHTML = `
+        <img src="media/teacher2.jpg" alt="Преподаватель" class="teacher-photo">
+        <h2>Нұрсұлтан Әбдірахманов</h2>
+        <p>Профессиональный преподаватель истории, готовящий к ЕНТ и олимпиадам.</p>
+        <div class="stats">
+          <div><strong>8 лет</strong> опыта</div>
+          <div><strong>25</strong> выпускников с медалью</div>
+          <div><strong>15</strong> учеников на гранте</div>
+        </div>
+        <button class="more-btn" onclick="location.href='chat-nursultan.html'">Связаться</button>
+      `;
+    } else {
+      card.innerHTML = `
+        <div class="no-teacher">
+          <h2>Пока учитель не доступен</h2>
+          <p>По выбранному предмету пока нет преподавателя. Скоро появится!</p>
+        </div>
+      `;
+    }
+  }
+  </script>
+  
+</body>
+</html>

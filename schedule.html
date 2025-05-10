@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TimeStudy</title>
+  <link rel="icon" type="image/png" href="media/off_logo.png" />
+  <link rel="stylesheet" href="css/schedule.css" />
+  <script src="js/schedule.js" defer></script>
+</head>
+<body>
+<header class="header-centered">
+  <div class="container header-center flex justify-between items-center">
+    <a href="teacher-index.html" class="logo-link">TIMESTUDY</a>
+    <a href="teacher-bookings.html" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+      Список учеников
+    </a>
+  </div>
+</header>
+
+
+  <h1>Моё расписание</h1>
+  <div class="form-container">
+    <label class="subject-label">Выберите предмет:</label>
+    <div class="lesson-grid" id="subject-selection">
+      <div class="logo-item" data-title="Математика"><img src="img/les-matematika.png" alt="Математика"></div>
+      <div class="logo-item" data-title="Физика"><img src="img/les-fizika.png" alt="Физика"></div>
+      <div class="logo-item" data-title="IT"><img src="img/les-it.png" alt="IT"></div>
+      <div class="logo-item" data-title="Языки"><img src="img/les-language.png" alt="Языки"></div>
+      <div class="logo-item" data-title="Биология"><img src="img/les-biology.png" alt="Биология"></div>
+      <div class="logo-item" data-title="Экономика"><img src="img/les-economica.png" alt="Экономика"></div>
+      <div class="logo-item" data-title="Химия"><img src="img/les-himia.png" alt="Химия"></div>
+      <div class="logo-item" data-title="Маркетинг"><img src="img/les-marceting.png" alt="Маркетинг"></div>
+      <div class="logo-item" data-title="Data Science"><img src="img/les-data.png" alt="Data"></div>
+    </div>
+
+    <label>Дата:</label>
+    <input type="date" id="slot-date" />
+
+    <label>Время:</label>
+    <input type="time" id="slot-time" />
+
+    <button onclick="addSlot()">Добавить слот</button>
+
+    <div class="slot-list" id="slot-list"></div>
+  </div>
+<footer style="background: #e8f9fd; color: #333; padding: 60px 20px 20px 20px;">
+  <div style="max-width: 1200px; margin: 0 auto; display: grid; gap: 40px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+
+    <!-- О компании -->
+    <div>
+      <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">TimeStudy</h3>
+      <p style="color: #555; font-size: 15px;">
+        Онлайн-платформа для обучения. Наша цель — предоставить качественные образовательные услуги для школьников и их родителей.
+      </p>
+    </div>
+
+    <!-- Быстрые ссылки -->
+    <div>
+      <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">Ссылки</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="index.html" style="color: #555; text-decoration: none;">Главная</a></li>
+        <li><a href="subjects-school.html" style="color: #555; text-decoration: none;">Курсы</a></li>
+        <li><a href="contacts.html" style="color: #555; text-decoration: none;">Контакты</a></li>
+        <li><a href="premium.html" style="color: #555; text-decoration: none;">Премиум</a></li>
+      </ul>
+    </div>
+
+    <!-- Контакты -->
+    <div>
+      <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">Контакты</h4>
+      <ul style="list-style: none; padding: 0; color: #555;">
+        <li>📞 +7 (777) 123-4567</li>
+        <li>✉️ support@timestudy.kz</li>
+        <li>📍 Алматы, Казахстан</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div style="margin-top: 40px; border-top: 1px solid #ccc; padding-top: 20px; text-align: center; font-size: 14px; color: #777;">
+    © 2025 TimeStudy. Все права защищены.
+  </div>
+</footer>
+</body>
+</html>

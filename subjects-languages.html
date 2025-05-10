@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Иностранные языки</title>
+  <link rel="stylesheet" href="css/subjects.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+
+<header class="header">
+  <div class="container">
+    <div class="logo">TIMESTUDY</div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О проекте</a>
+      <a href="faq.html">FAQ</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="contacts.html">Контакты</a>
+      <span id="user-info"></span>
+    </nav>
+  </div>
+</header>
+
+<section class="subjects">
+  <div class="container-subjects">
+
+    <!-- Список языков -->
+    <div class="subjects-list">
+      <ul>
+        <li onclick="updateLanguageCard('english')"><span class="icon">🇬🇧</span> Английский</li>
+        <li onclick="updateLanguageCard('russian')"><span class="icon">🇷🇺</span> Русский</li>
+        <li onclick="updateLanguageCard('turkish')"><span class="icon">🇹🇷</span> Турецкий</li>
+        <li onclick="updateLanguageCard('french')"><span class="icon">🇫🇷</span> Французский</li>
+      </ul>
+    </div>
+
+    <!-- Карточка преподавателя -->
+    <div class="teacher-card" id="teacher-card">
+      <img src="media/teacher1.jpg" alt="Преподаватель" class="teacher-photo">
+      <h2>Ербол Ержанов</h2>
+      <p>Преподаёт английский язык на высоком уровне подготовки IELTS и TOEFL.</p>
+      <div class="stats">
+        <div><strong>8 лет</strong> опыта</div>
+        <div><strong>50+</strong> студентов с сертификатами</div>
+      </div>
+      <button class="more-btn" onclick="location.href='chat-erbol.html'">Связаться</button>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 TIMESTUDY. Все права защищены.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+<!-- Скрипт для языков -->
+<script>
+let currentTeacherIndex = 0;
+
+const russianTeachers = [
+  {
+    img: "media/teacher1.jpg",
+    name: "Ербол Ержанов",
+    desc: "Преподаёт русский язык для школьников и студентов.",
+    stats: ["8 лет опыта", "45 студентов на гранте"]
+  },
+  {
+    img: "media/teacher2.jpg",
+    name: "Нұрсұлтан Әбдірахманов",
+    desc: "Эксперт по русскому языку и турецкому для носителей.",
+    stats: ["7 лет опыта", "30 студентов прошли международные курсы"]
+  }
+];
+
+function updateLanguageCard(language) {
+  const card = document.getElementById('teacher-card');
+
+  if (language === 'english') {
+    card.innerHTML = `
+      <img src="media/teacher1.jpg" alt="Преподаватель" class="teacher-photo">
+      <h2>Ербол Ержанов</h2>
+      <p>Преподаёт английский язык на высоком уровне подготовки IELTS и TOEFL.</p>
+      <div class="stats">
+        <div><strong>8 лет</strong> опыта</div>
+        <div><strong>50+</strong> студентов с сертификатами</div>
+      </div>
+      <button class="more-btn" onclick="location.href='chat-erbol.html'">Связаться</button>
+    `;
+  } 
+  else if (language === 'turkish') {
+    card.innerHTML = `
+      <img src="media/teacher2.jpg" alt="Преподаватель" class="teacher-photo">
+      <h2>Нұрсұлтан Әбдірахманов</h2>
+      <p>Преподаёт турецкий язык для начинающих и продвинутых студентов.</p>
+      <div class="stats">
+        <div><strong>7 лет</strong> опыта</div>
+        <div><strong>30+</strong> успешных учеников</div>
+      </div>
+      <button class="more-btn" onclick="location.href='chat-nursultan.html'">Связаться</button>
+    `;
+  } 
+  else if (language === 'russian') {
+    currentTeacherIndex = 0;
+    showRussianTeacher();
+  } 
+  else {
+    card.innerHTML = `
+      <div class="no-teacher">
+        <h2>Пока учитель не доступен</h2>
+        <p>По выбранному языку пока нет преподавателя. Следите за обновлениями!</p>
+      </div>
+    `;
+  }
+}
+
+function showRussianTeacher() {
+  const teacher = russianTeachers[currentTeacherIndex];
+  const card = document.getElementById('teacher-card');
+
+  card.classList.add('fade-out');
+
+  setTimeout(() => {
+    const chatLink = teacher.name.includes('Ербол') ? 'chat-erbol.html' : 'chat-nursultan.html';
+
+    card.innerHTML = `
+      <img src="${teacher.img}" alt="Преподаватель" class="teacher-photo">
+      <h2>${teacher.name}</h2>
+      <p>${teacher.desc}</p>
+      <div class="stats">
+        <div><strong>${teacher.stats[0]}</strong></div>
+        <div><strong>${teacher.stats[1]}</strong></div>
+      </div>
+      <button class="more-btn" onclick="location.href='${chatLink}'">Связаться</button>
+      <div class="dots">
+        ${russianTeachers.map((_, index) => `
+          <span class="dot ${index === currentTeacherIndex ? 'active' : ''}" onclick="changeRussianTeacher(${index})"></span>
+        `).join('')}
+      </div>
+    `;
+
+    card.classList.remove('fade-out');
+    card.classList.add('fade-in');
+
+    setTimeout(() => {
+      card.classList.remove('fade-in');
+    }, 500);
+
+  }, 500);
+}
+
+
+
+function changeRussianTeacher(index) {
+  currentTeacherIndex = index;
+  showRussianTeacher();
+}
+</script>
+
+<style>
+/* Анимация появления карточки */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* Стили для точек */
+.dots {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #6C63FF;
+}
+</style>
+
+</body>
+</html>

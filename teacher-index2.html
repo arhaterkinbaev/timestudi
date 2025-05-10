@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TimeStudy</title>
+  <link rel="icon" type="image/png" href="media/off_logo.png" />
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/1style.css" />
+  <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="logo">TIMESTUDY</div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="schedule.html">Расписание</a>
+      <a href="teacher-contacts.html">Контакты</a>
+      <span id="user-info"></span>
+    </nav>
+  </div>
+</header>
+<section class="hero">
+  <div class="container">
+    <h1>Добро пожаловать в TimeStudy, преподаватель!</h1>
+    <p>Управляйте своим профилем и предметами, которые вы хотите преподавать.</p>
+
+    <div class="directions">
+      <button class="direction-btn" onclick="window.location.href='subject-selection.html'">
+        📚 Создать расписание
+      </button>
+      <button class="direction-btn" onclick="window.location.href='chat-nursultan.html'">
+        💬 Сообщения от учеников
+      </button>
+      <button class="direction-btn" onclick="window.location.href='premium.html'">
+        🌟 Премиум подписка
+      </button>
+    </div>
+  </div>
+</section>
+  <!-- 2 -->
+  <section class="partners-section">
+    <h1>Возможные предметы для преподования</h1>
+    <div class="slider">
+<div class="logos">
+  <div class="logo-item" data-title="Математика"><img src="img/les-matematika.png" alt="Математика"></div>
+  <div class="logo-item" data-title="Физика"><img src="img/les-fizika.png" alt="Физика"></div>
+  <div class="logo-item" data-title="IT"><img src="img/les-it.png" alt="IT"></div>
+  <div class="logo-item" data-title="Языки"><img src="img/les-language.png" alt="Языки"></div>
+  <div class="logo-item" data-title="Биология"><img src="img/les-biology.png" alt="Биология"></div>
+  <div class="logo-item" data-title="Экономика"><img src="img/les-economica.png" alt="Экономика"></div>
+  <div class="logo-item" data-title="Химия"><img src="img/les-himia.png" alt="Химия"></div>
+  <div class="logo-item" data-title="Маркетинг"><img src="img/les-marceting.png" alt="Маркетинг"></div>
+  <div class="logo-item" data-title="Data Science"><img src="img/les-data.png" alt="Data"></div>
+</div>
+    </div>
+  </section>
+  <script src="script.js"></script>  
+</body>
+</html>
+
+
+<!-- Слайд-контейнер -->
+<div class="relative w-full max-w-6xl mx-auto mt-10 overflow-hidden rounded-lg shadow-lg bg-white">
+  <div id="slider" class="flex transition-transform duration-700" style="transform: translateX(0%)">
+
+    <!-- Слайд 1 -->
+    <section class="min-w-full flex items-center justify-between bg-[#e7f7ff] p-10">
+      <div class="w-1/2 pr-6">
+        <h2 class="text-4xl font-bold text-[#1ba3e3]">Испытайте максимальную гибкость и свободу!</h2>
+        <p class="mt-4 text-gray-700 text-lg">
+          Какой день, какое время — все зависит от вас. Ведь мы ценим время и работу учителей.
+        </p>
+        <a href="schedule.html" class="mt-6 px-6 py-3 bg-[#1ba3e3] text-white rounded-md hover:bg-[#148ac3] inline-block text-center">
+          Создать расписание
+        </a>
+      </div>
+      <img src="img/slide1.png" alt="Slide 1" class="w-1/3 rounded-lg shadow-md">
+    </section>
+
+    <!-- Слайд 2 – Расписание -->
+    <section class="min-w-full flex items-center justify-between bg-[#e9fafe] p-10">
+      <div class="w-1/2 pr-6">
+        <h2 class="text-4xl font-bold text-[#1ba3e3]">Гибкое расписание — вы управляете своим временем</h2>
+        <p class="mt-4 text-gray-700 text-lg">
+          Преподаватели могут сами выставлять удобное расписание и видеть записи от учеников.
+        </p>
+        <a href="schedule.html" class="mt-6 inline-block px-6 py-3 bg-[#1ba3e3] text-white rounded-md hover:bg-[#148ac3]">Управление расписанием</a>
+      </div>
+      <img src="img/slide2.png" alt="Schedule" class="w-1/3 rounded-lg shadow-md">
+    </section>
+
+    <!-- Слайд 3 – Личный кабинет -->
+    <section class="min-w-full flex items-center justify-between bg-[#ecfdf3] p-10">
+      <div class="w-1/2 pr-6">
+        <h2 class="text-4xl font-bold text-[#22c55e]">Видеть все записи и управлять занятиями</h2>
+        <p class="mt-4 text-gray-700 text-lg">
+          В личном кабинете преподаватель видит кто записался, когда, и может редактировать слоты.
+        </p>
+        <a href="teacher-index.html" class="mt-6 inline-block px-6 py-3 bg-[#22c55e] text-white rounded-md hover:bg-[#16a34a]">Перейти в кабинет</a>
+      </div>
+      <img src="img/slide3.png" alt="Dashboard" class="w-1/3 rounded-lg shadow-md">
+    </section>
+
+    <!-- Слайд 4 – Общение -->
+    <section class="min-w-full flex items-center justify-between bg-[#f4f3ff] p-10">
+      <div class="w-1/2 pr-6">
+        <h2 class="text-4xl font-bold text-[#7c3aed]">Общение с учениками в одном месте</h2>
+        <p class="mt-4 text-gray-700 text-lg">
+          Удобный чат для быстрой связи с учениками и уведомлений о новых записях.
+        </p>
+        <a href="chat-nursultan.html" class="mt-6 inline-block px-6 py-3 bg-[#7c3aed] text-white rounded-md hover:bg-[#5b21b6]">Перейти в чат</a>
+      </div>
+      <img src="img/slide4.png" alt="Chat" class="w-1/3 rounded-lg shadow-md">
+    </section>
+
+    <!-- Слайд 5 – Подписка -->
+    <section class="min-w-full flex items-center justify-between bg-[#fff1f2] p-10">
+      <div class="w-1/2 pr-6">
+        <h2 class="text-4xl font-bold text-[#e11d48]">Премиум для преподавателей</h2>
+        <p class="mt-4 text-gray-700 text-lg">
+          Получайте больше учеников, продвигайтесь в топ, и получите значок доверия в профиле.
+        </p>
+        <a href="premium.html" class="mt-6 inline-block px-6 py-3 bg-[#e11d48] text-white rounded-md hover:bg-[#be123c]">Оформить премиум</a>
+      </div>
+      <img src="img/slide5.png" alt="Premium" class="w-1/3 rounded-lg shadow-md">
+    </section>
+
+    <!-- Слайд 6 – Cloud материалы -->
+    <section class="min-w-full flex items-center justify-between bg-[#f0f9ff] p-10">
+      <div class="w-1/2 pr-6">
+        <h2 class="text-4xl font-bold text-[#0284c7]">Все учебные материалы в облаке</h2>
+        <p class="mt-4 text-gray-700 text-lg">
+          Загружайте презентации, файлы и видео, чтобы ученики имели доступ в любое время.
+        </p>
+        <a href="#" class="mt-6 inline-block px-6 py-3 bg-[#0284c7] text-white rounded-md hover:bg-[#0369a1]">Загрузить материалы</a>
+      </div>
+      <img src="img/slide6.png" alt="Cloud" class="w-1/3 rounded-lg shadow-md">
+    </section>
+
+  </div>
+</div>
+
+   <!-- Индикаторлар -->
+<!-- Индикаторлар -->
+<div id="mainSliderIndicators" class="flex justify-center mt-4 gap-2">
+  <button onclick="goToSlide(0)" class="w-3 h-3 rounded-full bg-blue-500"></button>
+  <button onclick="goToSlide(1)" class="w-3 h-3 rounded-full bg-blue-200"></button>
+  <button onclick="goToSlide(2)" class="w-3 h-3 rounded-full bg-blue-200"></button>
+  <button onclick="goToSlide(3)" class="w-3 h-3 rounded-full bg-blue-200"></button>
+  <button onclick="goToSlide(4)" class="w-3 h-3 rounded-full bg-blue-200"></button>
+  <button onclick="goToSlide(5)" class="w-3 h-3 rounded-full bg-blue-200"></button>
+</div>
+
+
+<section class="bg-white py-12 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-blue-800 mb-4">
+      Тысячи преподавателей в восторге от TimeStudy!
+    </h2>
+    <p class="text-gray-600">Вы тоже являетесь частью сообщества. Успех помогает TimeStudy.</p>
+
+    <div id="testimonialSlider" class="relative overflow-hidden mt-8">
+      <div id="testimonialTrack" class="flex transition-transform duration-700">
+        <!-- Testimonials: 3 слайд -->
+        <div class="min-w-full px-4">
+          <div class="bg-purple-50 p-6 rounded-xl shadow-md">
+            <p class="italic text-gray-700">Благодаря TimeStudy построил карьеру учителя!</p>
+          </div>
+        </div>
+        <div class="min-w-full px-4">
+          <div class="bg-indigo-50 p-6 rounded-xl shadow-md">
+            <p class="italic text-gray-700">Теперь я могу преподовать удаленно</p>
+          </div>
+        </div>
+        <div class="min-w-full px-4">
+          <div class="bg-pink-50 p-6 rounded-xl shadow-md">
+            <p class="italic text-gray-700">Интерфейс и функционал для учителей приятен</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center mt-4 gap-4">
+        <button onclick="prevTestimonial()" class="border px-3 py-1 rounded hover:bg-gray-100">&larr;</button>
+        <button onclick="nextTestimonial()" class="border px-3 py-1 rounded hover:bg-gray-100">&rarr;</button>
+      </div>
+      <div class="flex justify-center gap-2 mt-3">
+        <span id="testimonialDot0" class="w-3 h-3 bg-cyan-400 rounded-full"></span>
+        <span id="testimonialDot1" class="w-3 h-3 bg-cyan-200 rounded-full"></span>
+        <span id="testimonialDot2" class="w-3 h-3 bg-cyan-200 rounded-full"></span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 7 -->
+<section class="bg-white py-12 px-4">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-blue-800 mb-6 text-center">Часто задаваемые вопросы для преподавателей</h2>
+    <div class="space-y-4" id="faqAccordion">
+
+      <!-- Вопрос 1 -->
+      <div class="border border-gray-200 rounded-lg">
+        <button class="w-full text-left px-6 py-4 text-lg font-medium text-gray-800 flex justify-between items-center" onclick="toggleFAQ(0)">
+          Как добавить своё расписание?
+          <svg class="w-5 h-5 transform transition-transform duration-300" id="faqIcon0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faqContent0">
+          <p class="text-gray-700">
+            Зайдите в раздел «Расписание», выберите предмет, дату и время, и нажмите кнопку «Добавить слот».
+          </p>
+        </div>
+      </div>
+
+      <!-- Вопрос 2 -->
+      <div class="border border-gray-200 rounded-lg">
+        <button class="w-full text-left px-6 py-4 text-lg font-medium text-gray-800 flex justify-between items-center" onclick="toggleFAQ(1)">
+          Где я вижу записи учеников?
+          <svg class="w-5 h-5 transform transition-transform duration-300" id="faqIcon1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faqContent1">
+          <p class="text-gray-700">
+            В личном кабинете вы можете видеть, какие слоты были забронированы и кем.
+          </p>
+        </div>
+      </div>
+
+      <!-- Вопрос 3 -->
+      <div class="border border-gray-200 rounded-lg">
+        <button class="w-full text-left px-6 py-4 text-lg font-medium text-gray-800 flex justify-between items-center" onclick="toggleFAQ(2)">
+          Могу ли я изменить или удалить слот?
+          <svg class="w-5 h-5 transform transition-transform duration-300" id="faqIcon2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faqContent2">
+          <p class="text-gray-700">
+            Да. Вы можете удалить любой слот, если он ещё не был забронирован учеником.
+          </p>
+        </div>
+      </div>
+
+      <!-- Вопрос 4 -->
+      <div class="border border-gray-200 rounded-lg">
+        <button class="w-full text-left px-6 py-4 text-lg font-medium text-gray-800 flex justify-between items-center" onclick="toggleFAQ(3)">
+          Как мне получить больше учеников?
+          <svg class="w-5 h-5 transform transition-transform duration-300" id="faqIcon3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faqContent3">
+          <p class="text-gray-700">
+            Активируйте премиум-подписку, чтобы подняться в поиске и получить доступ к неограниченному количеству учеников.
+          </p>
+        </div>
+      </div>
+
+      <!-- Вопрос 5 -->
+      <div class="border border-gray-200 rounded-lg">
+        <button class="w-full text-left px-6 py-4 text-lg font-medium text-gray-800 flex justify-between items-center" onclick="toggleFAQ(4)">
+          Как использовать чат с учениками?
+          <svg class="w-5 h-5 transform transition-transform duration-300" id="faqIcon4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="px-6 pb-4 hidden" id="faqContent4">
+          <p class="text-gray-700">
+            Перейдите в раздел «Чат», чтобы связаться с учениками, обсудить детали занятий или ответить на вопросы.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<footer style="background: #e8f9fd; color: #333; padding: 60px 20px 20px 20px;">
+  <div style="max-width: 1200px; margin: 0 auto; display: grid; gap: 40px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+
+    <!-- О компании -->
+    <div>
+      <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">TimeStudy</h3>
+      <p style="color: #555; font-size: 15px;">
+        Онлайн-платформа для обучения. Наша цель — предоставить качественные образовательные услуги для школьников и их родителей.
+      </p>
+    </div>
+
+    <!-- Быстрые ссылки -->
+    <div>
+      <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">Ссылки</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="index.html" style="color: #555; text-decoration: none;">Главная</a></li>
+        <li><a href="subjects-school.html" style="color: #555; text-decoration: none;">Курсы</a></li>
+        <li><a href="contacts.html" style="color: #555; text-decoration: none;">Контакты</a></li>
+        <li><a href="premium.html" style="color: #555; text-decoration: none;">Премиум</a></li>
+      </ul>
+    </div>
+
+    <!-- Контакты -->
+    <div>
+      <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">Контакты</h4>
+      <ul style="list-style: none; padding: 0; color: #555;">
+        <li>📞 +7 (777) 123-4567</li>
+        <li>✉️ support@timestudy.kz</li>
+        <li>📍 Алматы, Казахстан</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div style="margin-top: 40px; border-top: 1px solid #ccc; padding-top: 20px; text-align: center; font-size: 14px; color: #777;">
+    © 2025 TimeStudy. Все права защищены.
+  </div>
+</footer>
+
+<script>
+  function toggleFAQ(index) {
+    const content = document.getElementById(`faqContent${index}`);
+    const icon = document.getElementById(`faqIcon${index}`);
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      icon.classList.add('rotate-180');
+    } else {
+      content.classList.add('hidden');
+      icon.classList.remove('rotate-180');
+    }
+  }
+</script>
+
+
+<script>
+  // --- Main Slider ---
+  const slider = document.getElementById("slider");
+  const slides = document.querySelectorAll("#slider > section");
+  const indicators = document.querySelectorAll("#mainSliderIndicators button");
+
+  let currentSlide = 0;
+  const totalSlides = slides.length;
+
+  function goToSlide(index) {
+    currentSlide = index;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+
+    indicators.forEach((dot, i) => {
+      dot.classList.remove("bg-blue-500");
+      dot.classList.add("bg-blue-200");
+      if (i === index) dot.classList.add("bg-blue-500");
+    });
+  }
+
+  function autoSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    goToSlide(currentSlide);
+  }
+
+  setInterval(autoSlide, 5000); // Авто ауысу 5 секунд сайын
+
+  // --- Testimonials ---
+  let testimonialIndex = 0;
+  const testimonialTrack = document.getElementById("testimonialTrack");
+  const totalTestimonials = 3;
+
+  function updateTestimonial(index) {
+    testimonialTrack.style.transform = `translateX(-${index * 100}%)`;
+    for (let i = 0; i < totalTestimonials; i++) {
+      document.getElementById(`testimonialDot${i}`).classList.remove("bg-cyan-400");
+      document.getElementById(`testimonialDot${i}`).classList.add("bg-cyan-200");
+    }
+    document.getElementById(`testimonialDot${index}`).classList.add("bg-cyan-400");
+  }
+
+  function nextTestimonial() {
+    testimonialIndex = (testimonialIndex + 1) % totalTestimonials;
+    updateTestimonial(testimonialIndex);
+  }
+
+  function prevTestimonial() {
+    testimonialIndex = (testimonialIndex - 1 + totalTestimonials) % totalTestimonials;
+    updateTestimonial(testimonialIndex);
+  }
+
+  setInterval(() => {
+    nextTestimonial();
+  }, 5000);
+</script>

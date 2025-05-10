@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TimeStudy</title>
+  <link rel="icon" type="image/png" href="media/off_logo.png" />
+  <link rel="stylesheet" href="css/booking.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo"><a href="index.html">TIMESTUDY</a></div>
+  </header>
+<section class="my-bookings">
+  <h2>Ваши записи</h2>
+  <div id="student-bookings" class="booking-grid">
+    <!-- Карточки с записанными уроками появятся здесь -->
+  </div>
+</section>
+  <main class="booking-container">
+    <h1>Доступные слоты</h1>
+    <div class="teacher-select">
+      <label for="teacher">Выберите преподавателя:</label>
+      <select id="teacher" onchange="loadSlots()">
+        <option value="">-- выберите --</option>
+        <option value="Ербол">Ербол</option>
+        <option value="Нұрсұлтан">Нұрсұлтан</option>
+      </select>
+    </div>
+
+    <div id="available-slots" class="slots-list">
+      <!-- слоты загружаются сюда -->
+    </div>
+  </main>
+
+  <script src="js/booking.js" defer></script>
+  <footer style="background: #e8f9fd; color: #333; padding: 60px 20px 20px 20px;">
+  <div style="max-width: 1200px; margin: 0 auto; display: grid; gap: 40px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+
+    <!-- О компании -->
+    <div>
+      <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">TimeStudy</h3>
+      <p style="color: #555; font-size: 15px;">
+        Онлайн-платформа для обучения. Наша цель — предоставить качественные образовательные услуги для школьников и их родителей.
+      </p>
+    </div>
+
+    <!-- Быстрые ссылки -->
+    <div>
+      <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">Ссылки</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="index.html" style="color: #555; text-decoration: none;">Главная</a></li>
+        <li><a href="subjects-school.html" style="color: #555; text-decoration: none;">Курсы</a></li>
+        <li><a href="contacts.html" style="color: #555; text-decoration: none;">Контакты</a></li>
+        <li><a href="premium.html" style="color: #555; text-decoration: none;">Премиум</a></li>
+      </ul>
+    </div>
+
+    <!-- Контакты -->
+    <div>
+      <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">Контакты</h4>
+      <ul style="list-style: none; padding: 0; color: #555;">
+        <li>📞 +7 (777) 123-4567</li>
+        <li>✉️ support@timestudy.kz</li>
+        <li>📍 Алматы, Казахстан</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div style="margin-top: 40px; border-top: 1px solid #ccc; padding-top: 20px; text-align: center; font-size: 14px; color: #777;">
+    © 2025 TimeStudy. Все права защищены.
+  </div>
+</footer>
+</body>
+</html>

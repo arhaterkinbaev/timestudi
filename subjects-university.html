@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Университетские курсы</title>
+  <link rel="stylesheet" href="css/subjects.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+
+<header class="header">
+  <div class="container">
+    <div class="logo">TIMESTUDY</div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О проекте</a>
+      <a href="faq.html">FAQ</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="contacts.html">Контакты</a>
+      <span id="user-info"></span>
+    </nav>
+  </div>
+</header>
+
+<section class="subjects">
+  <div class="container-subjects">
+
+    <!-- Список курсов -->
+    <div class="subjects-list">
+      <ul>
+        <li onclick="updateUniversityCard('programming')"><span class="icon">💻</span> Программирование</li>
+        <li onclick="updateUniversityCard('economics')"><span class="icon">📈</span> Экономика</li>
+        <li onclick="updateUniversityCard('marketing')"><span class="icon">📚</span> Маркетинг</li>
+        <li onclick="updateUniversityCard('datascience')"><span class="icon">📊</span> Data Science</li>
+      </ul>
+    </div>
+
+    <!-- Карточка преподавателя -->
+    <div class="teacher-card" id="teacher-card">
+      <img src="media/teacher2.jpg" alt="Преподаватель" class="teacher-photo">
+      <h2>Нұрсұлтан Әбдірахманов</h2>
+      <p>Преподаёт программирование и разработку веб-приложений на профессиональном уровне.</p>
+      <div class="stats">
+        <div><strong>7 лет</strong> опыта</div>
+        <div><strong>40</strong> успешных проектов</div>
+        <div><strong>25</strong> студентов устроились в IT-компании</div>
+      </div>
+      <button class="more-btn" onclick="location.href='chat-nursultan.html'">Связаться</button>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 TIMESTUDY. Все права защищены.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+<!-- Скрипт смены карточки для университетских курсов -->
+<script>
+function updateUniversityCard(course) {
+  const card = document.getElementById('teacher-card');
+
+  if (course === 'programming') {
+    card.innerHTML = `
+      <img src="media/teacher1.png" alt="Преподаватель" class="teacher-photo">
+      <h2>Ербол Ержанов</h2>
+      <p>Преподаёт программирование и разработку веб-приложений на профессиональном уровне.</p>
+      <div class="stats">
+        <div><strong>7 лет</strong> опыта</div>
+        <div><strong>40</strong> успешных проектов</div>
+        <div><strong>25</strong> студентов устроились в IT-компании</div>
+      </div>
+      <button class="more-btn" onclick="location.href='chat-erbol.html'">Связаться</button>
+    `;
+  } else {
+    card.innerHTML = `
+      <div class="no-teacher">
+        <h2>Пока учитель не доступен</h2>
+        <p>По выбранному курсу пока нет преподавателя. Следите за обновлениями!</p>
+      </div>
+    `;
+  }
+}
+</script>
+
+</body>
+</html>

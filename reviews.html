@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TimeStudy</title>
+  <link rel="icon" type="image/png" href="media/off_logo.png" />
+  <link rel="stylesheet" href="css/reviews.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">TIMESTUDY</div>
+      <nav class="nav">
+        <a href="index.html" class="active">Главная</a>
+        <a href="about.html">О проекте</a>
+        <a href="faq.html" class="active">FAQ</a>
+        <a href="reviews.html" class="active">Отзывы</a>
+        <a href="contact.html">Контакты</a>
+        <span id="user-info"></span>
+      </nav>
+    </div>
+  </header>
+
+<section class="reviews">
+  <div class="container">
+
+    <h1>Отзывы пользователей</h1>
+
+    <!-- Список отзывов -->
+    <div id="reviews-list">
+
+      <div class="review-item">
+        <h3>Айбек</h3>
+        <p>Отличная платформа для учёбы! Очень удобно записываться к преподавателям.</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+      </div>
+
+      <div class="review-item">
+        <h3>Айбек</h3>
+        <p>Награды и челленджи действительно мотивируют не бросать занятия!</p>
+        <div class="stars">⭐⭐⭐⭐</div>
+      </div>
+
+      <div class="review-item">
+        <h3>Ербол (Преподаватель)</h3>
+        <p>TimeStudy даёт мне возможность находить новых учеников и удобно планировать уроки!</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+      </div>
+
+    </div>
+
+    <!-- Форма добавления отзыва -->
+    <div class="review-form">
+      <h2>Оставить отзыв</h2>
+
+      <textarea id="review-text" placeholder="Ваш отзыв..." rows="4"></textarea>
+      <div class="star-rating">
+        <span data-value="1">⭐</span>
+        <span data-value="2">⭐</span>
+        <span data-value="3">⭐</span>
+        <span data-value="4">⭐</span>
+        <span data-value="5">⭐</span>
+      </div>
+      
+
+      <button onclick="addReview()">Оставить отзыв</button>
+    </div>
+
+  </div>
+</section>
+
+<footer style="background: #e8f9fd; color: #333; padding: 60px 20px 20px 20px;">
+  <div style="max-width: 1200px; margin: 0 auto; display: grid; gap: 40px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+
+    <!-- О компании -->
+    <div>
+      <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">TimeStudy</h3>
+      <p style="color: #555; font-size: 15px;">
+        Онлайн-платформа для обучения. Наша цель — предоставить качественные образовательные услуги для школьников и их родителей.
+      </p>
+    </div>
+
+    <!-- Быстрые ссылки -->
+    <div>
+      <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">Ссылки</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="index.html" style="color: #555; text-decoration: none;">Главная</a></li>
+        <li><a href="subjects-school.html" style="color: #555; text-decoration: none;">Курсы</a></li>
+        <li><a href="contacts.html" style="color: #555; text-decoration: none;">Контакты</a></li>
+        <li><a href="premium.html" style="color: #555; text-decoration: none;">Премиум</a></li>
+      </ul>
+    </div>
+
+    <!-- Контакты -->
+    <div>
+      <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">Контакты</h4>
+      <ul style="list-style: none; padding: 0; color: #555;">
+        <li>📞 +7 (777) 123-4567</li>
+        <li>✉️ support@timestudy.kz</li>
+        <li>📍 Алматы, Казахстан</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div style="margin-top: 40px; border-top: 1px solid #ccc; padding-top: 20px; text-align: center; font-size: 14px; color: #777;">
+    © 2025 TimeStudy. Все права защищены.
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/reviews.js"></script>
+
+</body>
+</html>

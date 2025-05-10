@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TimeStudy</title>
+  <link rel="icon" type="image/png" href="media/off_logo.png" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    :root {
+      --primary: rgb(9, 185, 244);
+      --primary-dark: rgb(7, 140, 200);
+      --primary-light: #e5faff;
+    }
+  </style>
+</head>
+<body class="bg-[#f0faff] text-gray-800">
+
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="logo">TIMESTUDY</a>
+    <nav class="nav">
+      <a href="index.html" class="active">Главная</a>
+      <a href="about.html">О проекте</a>
+      <a href="faq.html" class="active">FAQ</a>
+      <a href="reviews.html" class="active">Отзывы</a>
+      <a href="contact.html">Контакты</a>
+      <span id="user-info"></span>
+    </nav>
+  </div>
+</header>
+
+  <!-- Hero блок -->
+  <section class="bg-[var(--primary-light)] py-16">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col-reverse md:flex-row items-center">
+      <div class="md:w-1/2 mt-8 md:mt-0">
+        <h1 class="text-4xl font-extrabold text-[var(--primary)] mb-4">Добро пожаловать в TimeStudy</h1>
+        <p class="text-gray-700 mb-6 text-lg">
+          Мы — команда энтузиастов, стремящихся сделать онлайн-обучение доступным, эффективным и увлекательным для каждого.
+        </p>
+        <a href="how.html" class="inline-block bg-[var(--primary)] text-white px-6 py-2 rounded shadow hover:bg-[var(--primary-dark)] transition">Узнать больше</a>
+      </div>
+      <div class="md:w-1/2">
+        <img src="img/about.png" alt="О нас изображение" class="w-full max-w-md mx-auto">
+      </div>
+    </div>
+  </section>
+
+  <!-- Наша миссия -->
+
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Наша миссия</h2>
+      <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+        Мы верим, что образование — ключ к будущему. Наша цель — предоставить каждому ученику возможность учиться в удобное время, с лучшими преподавателями и современными технологиями.
+      </p>
+    </div>
+  </section>
+
+  <!-- Наша история -->
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/2">
+        <img src="img/history.png" alt="История" class="rounded-lg shadow">
+      </div>
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Наша история</h2>
+        <p class="text-gray-600 text-lg">
+          TimeStudy начался с маленькой команды учителей, которые хотели улучшить доступ к качественному образованию. С тех пор мы выросли в международную платформу с тысячами довольных учеников по всему миру.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Наши ценности -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Наши ценности</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="bg-white p-6 rounded-lg shadow text-center hover:shadow-xl transition">
+          <div class="text-blue-600 text-4xl mb-4">🎯</div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Качество</h3>
+          <p class="text-gray-600">Мы тщательно отбираем преподавателей и постоянно улучшаем платформу.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center hover:shadow-xl transition">
+          <div class="text-green-600 text-4xl mb-4">🚀</div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Инновации</h3>
+          <p class="text-gray-600">Используем самые современные технологии, чтобы обучение было удобным.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center hover:shadow-xl transition">
+          <div class="text-purple-600 text-4xl mb-4">🤝</div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Поддержка</h3>
+          <p class="text-gray-600">Мы всегда рядом — от первого вопроса до последнего экзамена.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Присоединяйтесь -->
+  <section class="bg-[var(--primary)] py-16 text-white text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold mb-4">Присоединяйтесь к TimeStudy уже сегодня</h2>
+      <p class="mb-6">Откройте новые горизонты знаний и начните путь к успеху с нашей командой.</p>
+      <a href="enroll.html" class="bg-white text-[var(--primary)] px-6 py-2 rounded font-semibold hover:bg-gray-100 transition">Зарегистрироваться</a>
+    </div>
+  </section>
+<!-- Наша команда -->
+<section class="py-16 bg-blue-50">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-10">Наша команда</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <img src="img/teacher1.png" alt="Учитель 1" class="w-24 h-24 mx-auto rounded-full mb-4">
+          <h3 class="text-lg font-semibold text-gray-700">Айгүл Сейітова</h3>
+          <p class="text-gray-500 text-sm">Преподаватель математики</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <img src="img/teacher2.png" alt="Учитель 2" class="w-24 h-24 mx-auto rounded-full mb-4">
+          <h3 class="text-lg font-semibold text-gray-700">Данияр Мұратов</h3>
+          <p class="text-gray-500 text-sm">Преподаватель физики</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <img src="img/teacher3.png" alt="Учитель 3" class="w-24 h-24 mx-auto rounded-full mb-4">
+          <h3 class="text-lg font-semibold text-gray-700">Жанар Әлиева</h3>
+          <p class="text-gray-500 text-sm">Координатор платформы</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Отзывы учеников (слайдер) -->
+<section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-12">Отзывы наших учеников</h2>
+      <div id="testimonial-slider" class="relative overflow-hidden">
+        <div id="testimonial-track" class="flex transition-transform duration-700 ease-in-out">
+  
+          <div class="min-w-full px-4">
+            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105">
+              <p class="text-gray-700 italic mb-4">«TimeStudy помог мне улучшить оценки по математике. Учителя очень отзывчивые!»</p>
+              <h3 class="text-sm font-semibold text-blue-600">Айгерим, 10 класс</h3>
+            </div>
+          </div>
+  
+          <div class="min-w-full px-4">
+            <div class="bg-green-50 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105">
+              <p class="text-gray-700 italic mb-4">«Мне нравится, что можно учиться в любое время. Это удобно!»</p>
+              <h3 class="text-sm font-semibold text-green-600">Нурбол, студент колледжа</h3>
+            </div>
+          </div>
+  
+          <div class="min-w-full px-4">
+            <div class="bg-yellow-50 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105">
+              <p class="text-gray-700 italic mb-4">«Платформа простая в использовании. Спасибо за поддержку!»</p>
+              <h3 class="text-sm font-semibold text-yellow-600">Жансая, 9 класс</h3>
+            </div>
+          </div>
+  
+        </div>
+  
+        <!-- Навигация -->
+        <div class="flex justify-center mt-6 gap-4">
+          <button onclick="prevTestimonial()" class="bg-gray-200 px-3 py-1 rounded hover:bg-gray-300">←</button>
+          <button onclick="nextTestimonial()" class="bg-gray-200 px-3 py-1 rounded hover:bg-gray-300">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Статистика -->
+<section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-8" style="color: rgb(9, 185, 244);">TimeStudy в цифрах</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-4xl font-extrabold text-blue-600 counter" data-target="1500">0</h3>
+          <p class="mt-2 text-gray-600">Успешных учеников</p>
+        </div>
+        <div>
+          <h3 class="text-4xl font-extrabold text-green-600 counter" data-target="98">0</h3>
+          <p class="mt-2 text-gray-600">%</p>
+          <p class="text-gray-600">Уровень удовлетворенности</p>
+        </div>
+        <div>
+          <h3 class="text-4xl font-extrabold text-yellow-600 counter" data-target="200">0</h3>
+          <p class="mt-2 text-gray-600">Профессиональных репетиторов</p>
+        </div>
+        <div>
+          <h3 class="text-4xl font-extrabold text-purple-600 counter" data-target="5000">0</h3>
+          <p class="mt-2 text-gray-600">Часов занятий</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Top Курстар -->
+<section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-10">Популярные курсы</h2>
+      <div id="coursesSlider" class="flex overflow-x-auto gap-6 snap-x">
+        <div class="min-w-[300px] snap-center bg-white shadow-md rounded-lg p-5 transition-transform hover:scale-105">
+          <h3 class="text-xl font-bold mb-2" style="color: rgb(9, 185, 244);">Математика</h3>
+          <div class="text-yellow-400 mb-2">⭐️⭐️⭐️⭐️⭐️</div>
+          <p class="text-gray-600 mb-4">Развивайте логическое мышление и решайте задачи легко.</p>
+          <a href="#" class="text-blue-600 hover:underline">Подробнее</a>
+        </div>
+        <div class="min-w-[300px] snap-center bg-white shadow-md rounded-lg p-5 transition-transform hover:scale-105">
+          <h3 class="text-xl font-bold mb-2" style="color: rgb(9, 185, 244);">Английский язык</h3>
+          <div class="text-yellow-400 mb-2">⭐️⭐️⭐️⭐️⭐️</div>
+          <p class="text-gray-600 mb-4">Изучайте язык эффективно с опытными преподавателями.</p>
+          <a href="#" class="text-blue-600 hover:underline">Подробнее</a>
+        </div>
+        <div class="min-w-[300px] snap-center bg-white shadow-md rounded-lg p-5 transition-transform hover:scale-105">
+          <h3 class="text-xl font-bold mb-2" style="color: rgb(9, 185, 244);">Физика</h3>
+          <div class="text-yellow-400 mb-2">⭐️⭐️⭐️⭐️⭐️</div>
+          <p class="text-gray-600 mb-4">Понимайте законы природы и готовьтесь к экзаменам.</p>
+          <a href="#" class="text-blue-600 hover:underline">Подробнее</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer style="background: #e8f9fd; color: #333; padding: 60px 20px 20px 20px;">
+  <div style="max-width: 1200px; margin: 0 auto; display: grid; gap: 40px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+
+    <!-- О компании -->
+    <div>
+      <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">TimeStudy</h3>
+      <p style="color: #555; font-size: 15px;">
+        Онлайн-платформа для обучения. Наша цель — предоставить качественные образовательные услуги для школьников и их родителей.
+      </p>
+    </div>
+
+    <!-- Быстрые ссылки -->
+    <div>
+      <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">Ссылки</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="index.html" style="color: #555; text-decoration: none;">Главная</a></li>
+        <li><a href="subjects-school.html" style="color: #555; text-decoration: none;">Курсы</a></li>
+        <li><a href="contacts.html" style="color: #555; text-decoration: none;">Контакты</a></li>
+        <li><a href="premium.html" style="color: #555; text-decoration: none;">Премиум</a></li>
+      </ul>
+    </div>
+
+    <!-- Контакты -->
+    <div>
+      <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">Контакты</h4>
+      <ul style="list-style: none; padding: 0; color: #555;">
+        <li>📞 +7 (777) 123-4567</li>
+        <li>✉️ support@timestudy.kz</li>
+        <li>📍 Алматы, Казахстан</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div style="margin-top: 40px; border-top: 1px solid #ccc; padding-top: 20px; text-align: center; font-size: 14px; color: #777;">
+    © 2025 TimeStudy. Все права защищены.
+  </div>
+</footer>
+  <script>
+    const chatToggle = document.getElementById('chatToggle');
+    const chatBox = document.getElementById('chatBox');
+    chatToggle.addEventListener('click', () => {
+      chatBox.classList.toggle('hidden');
+    });
+  </script>
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      const update = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+        const increment = target / 100;
+        if (current < target) {
+          counter.innerText = Math.ceil(current + increment);
+          setTimeout(update, 30);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      update();
+    });
+  </script>
+    
+  <script>
+    let testimonialIndex = 0;
+    const testimonialTrack = document.getElementById("testimonial-track");
+    const testimonials = document.querySelectorAll("#testimonial-track > div");
+  
+    function updateTestimonial(index) {
+      testimonialTrack.style.transform = `translateX(-${index * 100}%)`;
+    }
+  
+    function nextTestimonial() {
+      testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+      updateTestimonial(testimonialIndex);
+    }
+  
+    function prevTestimonial() {
+      testimonialIndex = (testimonialIndex - 1 + testimonials.length) % testimonials.length;
+      updateTestimonial(testimonialIndex);
+    }
+  
+    setInterval(() => {
+      nextTestimonial();
+    }, 5000);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Выбор предметов — TimeStudy</title>
+  <link rel="stylesheet" href="css/subject-selection.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+          <div class="logo">TIMESTUDY</div>
+          <nav class="nav">
+            <a href="teacher-index.html">Главная</a>
+            <a href="contacts.html">Контакты</a>
+            <span id="user-info" class="user-info"></span>
+          </nav>
+        </div>
+      </header>
+      
+
+<!-- Школьные предметы -->
+<section class="section-block">
+  <img src="media/school.jpg" alt="Школа">
+  <div class="section-content">
+    <h2>🏫 Школьные предметы</h2>
+    <ul>
+      <li><button onclick="addSubject('math')">📐 Математика</button></li>
+      <li><button onclick="addSubject('physics')">⚡ Физика</button></li>
+      <li><button onclick="addSubject('biology')">🌱 Биология</button></li>
+      <li><button onclick="addSubject('history')">📚 История</button></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Университетские курсы -->
+<section class="section-block">
+  <img src="media/univer.jpeg" alt="Университет">
+  <div class="section-content">
+    <h2>🎓 Университетские курсы</h2>
+    <ul>
+      <li><button onclick="addSubject('programming')">💻 Программирование</button></li>
+      <li><button onclick="addSubject('economics')">📈 Экономика</button></li>
+      <li><button onclick="addSubject('datascience')">📊 Data Science</button></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Иностранные языки -->
+<section class="section-block">
+  <img src="media/speak.jpg" alt="Языки">
+  <div class="section-content">
+    <h2>🌐 Иностранные языки</h2>
+    <ul>
+      <li><button onclick="addSubject('english')">🇬🇧 Английский</button></li>
+      <li><button onclick="addSubject('russian')">🇷🇺 Русский</button></li>
+      <li><button onclick="addSubject('turkish')">🇹🇷 Турецкий</button></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 TIMESTUDY. Все права защищены.
+</footer>
+
+<script>
+function addSubject(subject) {
+  let activeSubjects = JSON.parse(localStorage.getItem('activeSubjects')) || [];
+  if (!activeSubjects.includes(subject)) {
+    activeSubjects.push(subject);
+    localStorage.setItem('activeSubjects', JSON.stringify(activeSubjects));
+    alert('Вы добавлены на предмет!');
+  } else {
+    alert('Вы уже добавлены на этот предмет!');
+  }
+}
+</script>
+
+</body>
+</html>

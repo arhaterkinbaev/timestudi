@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TimeStudy – Цены</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary-color: #4dbcfb;
+      --primary-hover: #1ba3e3;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f2faff;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+<header class="header">
+  <div class="container">
+    <div class="logo">TIMESTUDY</div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="schedule.html">Расписание</a>
+      <a href="teacher-contacts.html">Контакты</a>
+      <span id="user-info"></span>
+    </nav>
+  </div>
+</header>
+
+<!-- ОСНОВНАЯ ЧАСТЬ -->
+<main class="py-12">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-4xl font-extrabold text-[var(--primary-color)] mb-4">Наши тарифы</h2>
+    <p class="text-lg text-gray-600 mb-6">Выберите подходящий пакет и начните преподовать с TimeStudy</p>
+
+    <div class="flex justify-center gap-4 mb-8">
+      <button id="monthlyBtn" class="px-4 py-2 text-sm font-semibold bg-[var(--primary-color)] text-white rounded">Месяц</button>
+      <button id="yearlyBtn" class="px-4 py-2 text-sm font-semibold bg-blue-100 text-blue-700 rounded">Год</button>
+      <select id="subjectFilter" class="px-4 py-2 text-sm font-medium border rounded text-gray-700">
+        <option value="all">Все тарифы</option>
+        <option value="1 предмет">1 предмет</option>
+        <option value="3 предмета">3 предмета</option>
+        <option value="Все предметы">Все предметы</option>
+      </select>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="pricingContainer"></div>
+  </div>
+</main>
+
+<!-- FAQ -->
+<section class="bg-white py-12">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-[var(--primary-color)] text-center mb-10">Часто задаваемые вопросы</h2>
+
+    <div class="space-y-4" id="faqContainer">
+      <!-- FAQ шаблон (повторяется) -->
+      <div class="border rounded-lg shadow-sm">
+        <button class="w-full flex justify-between items-center p-4 font-semibold text-gray-800 hover:bg-blue-50" onclick="toggleFaq(0)">
+          <span>Какие предметы доступны в подписке?</span>
+          <svg class="w-5 h-5 transition-transform" id="arrow0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="px-4 pb-4 hidden text-gray-600" id="faq0">
+          Все школьные предметы, включая математику, физику, химию, английский язык и другие.
+        </div>
+      </div>
+      <div class="border rounded-lg shadow-sm overflow-hidden">
+          <button class="w-full flex justify-between items-center p-4 text-left font-semibold text-gray-800 hover:bg-blue-50 transition" onclick="toggleFaq(1)">
+            <span>Могу ли я отменить подписку в любое время?</span>
+            <svg class="w-5 h-5 transform transition-transform duration-300" id="arrow1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="px-4 pb-4 hidden text-gray-600" id="faq1">
+            Да, вы можете отменить подписку в любой момент через личный кабинет без штрафов.
+          </div>
+        </div>
+  
+        <div class="border rounded-lg shadow-sm overflow-hidden">
+          <button class="w-full flex justify-between items-center p-4 text-left font-semibold text-gray-800 hover:bg-blue-50 transition" onclick="toggleFaq(2)">
+            <span>Есть ли пробный период?</span>
+            <svg class="w-5 h-5 transform transition-transform duration-300" id="arrow2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="px-4 pb-4 hidden text-gray-600" id="faq2">
+            Да, для новых пользователей доступен 7-дневный пробный период без оплаты.
+          </div>
+        </div>
+  
+        <div class="border rounded-lg shadow-sm overflow-hidden">
+          <button class="w-full flex justify-between items-center p-4 text-left font-semibold text-gray-800 hover:bg-blue-50 transition" onclick="toggleFaq(3)">
+            <span>Как осуществляется оплата?</span>
+            <svg class="w-5 h-5 transform transition-transform duration-300" id="arrow3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="px-4 pb-4 hidden text-gray-600" id="faq3">
+            Оплата происходит через банковскую карту, Google Pay или Apple Pay. Все транзакции защищены.
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- МОДАЛКА -->
+<div id="paymentModal" class="fixed inset-0 bg-black bg-opacity-40 hidden justify-center items-center z-50">
+  <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-md relative">
+    <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+    <h2 class="text-2xl font-bold text-center text-[var(--primary-color)] mb-4">Оплата</h2>
+    <form id="paymentForm" class="space-y-4">
+      <div><label class="block font-medium">Имя владельца</label><input type="text" class="w-full border rounded px-4 py-2" required></div>
+      <div><label class="block font-medium">Номер карты</label><input type="text" class="w-full border rounded px-4 py-2" required></div>
+      <div class="flex gap-4">
+        <div class="w-1/2"><label class="block font-medium">Срок</label><input type="text" class="w-full border rounded px-4 py-2" required></div>
+        <div class="w-1/2"><label class="block font-medium">CVC</label><input type="text" class="w-full border rounded px-4 py-2" required></div>
+      </div>
+      <button type="submit" class="w-full bg-[var(--primary-color)] text-white py-2 rounded hover:bg-[#1ba3e3] transition">Оплатить</button>
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer style="background: #e8f9fd; color: #333; padding: 60px 20px 20px 20px;">
+  <div style="max-width: 1200px; margin: 0 auto; display: grid; gap: 40px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+
+    <!-- О компании -->
+    <div>
+      <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">TimeStudy</h3>
+      <p style="color: #555; font-size: 15px;">
+        Онлайн-платформа для обучения. Наша цель — предоставить качественные образовательные услуги для школьников и их родителей.
+      </p>
+    </div>
+
+    <!-- Быстрые ссылки -->
+    <div>
+      <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">Ссылки</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="index.html" style="color: #555; text-decoration: none;">Главная</a></li>
+        <li><a href="subjects-school.html" style="color: #555; text-decoration: none;">Курсы</a></li>
+        <li><a href="contacts.html" style="color: #555; text-decoration: none;">Контакты</a></li>
+        <li><a href="premium.html" style="color: #555; text-decoration: none;">Премиум</a></li>
+      </ul>
+    </div>
+
+    <!-- Контакты -->
+    <div>
+      <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 15px; color: rgb(9, 185, 244);">Контакты</h4>
+      <ul style="list-style: none; padding: 0; color: #555;">
+        <li>📞 +7 (777) 123-4567</li>
+        <li>✉️ support@timestudy.kz</li>
+        <li>📍 Алматы, Казахстан</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div style="margin-top: 40px; border-top: 1px solid #ccc; padding-top: 20px; text-align: center; font-size: 14px; color: #777;">
+    © 2025 TimeStudy. Все права защищены.
+  </div>
+</footer>
+
+<!-- Скрипты -->
+<script>
+  const pricingContainer = document.getElementById('pricingContainer');
+  const monthlyBtn = document.getElementById('monthlyBtn');
+  const yearlyBtn = document.getElementById('yearlyBtn');
+  const subjectFilter = document.getElementById('subjectFilter');
+
+  const prices = {
+    monthly: [
+      { title: 'Базовый', price: '2990 Т/мес', color: 'blue', benefits: ['1 предмет', '4 ученика', 'Email поддержка'] },
+      { title: 'Стандарт', price: '7990 Т/мес', color: 'green', benefits: ['3 предмета', '8 учеников', 'Cloud доступ', 'Онлайн поддержка'] },
+      { title: 'Премиум', price: '15000 Т/мес', color: 'purple', benefits: ['Все предметы', 'Безлимит учеников', '24/7 поддержка'] },
+    ],
+    yearly: [
+      { title: 'Базовый', price: '29900 Т/год', color: 'blue', benefits: ['1 предмет', '48 учеников', 'Email поддержка'] },
+      { title: 'Стандарт', price: '79900 Т/год', color: 'green', benefits: ['3 предмета', '96 учеников', 'Cloud доступ', 'Онлайн поддержка'] },
+      { title: 'Премиум', price: '150000 Т/год', color: 'purple', benefits: ['Все предметы', 'Безлимит учеников', '24/7 поддержка'] },
+    ]
+  };
+
+  let currentType = 'monthly';
+
+  function renderPlans(type, subject) {
+    pricingContainer.innerHTML = '';
+    prices[type].forEach(plan => {
+      if (subject !== 'all' && !plan.benefits.includes(subject)) return;
+      const div = document.createElement('div');
+      div.className = `bg-white shadow-lg rounded-lg p-6 border-t-4 border-${plan.color}-500 hover:scale-105 transition`;
+      div.innerHTML = `
+        <h3 class="text-2xl font-bold mb-2">${plan.title}</h3>
+        <p class="text-3xl font-extrabold text-${plan.color}-600 mb-4">${plan.price}</p>
+        <ul class="text-left space-y-2">${plan.benefits.map(b => `<li>✅ ${b}</li>`).join('')}</ul>
+        <button class="choose-button mt-6 w-full bg-${plan.color}-600 text-white py-2 rounded hover:bg-${plan.color}-700">Выбрать</button>
+      `;
+      pricingContainer.appendChild(div);
+    });
+
+    document.querySelectorAll('.choose-button').forEach(button => {
+      button.addEventListener('click', () => {
+        document.getElementById('paymentModal').classList.remove('hidden');
+        document.getElementById('paymentModal').classList.add('flex');
+      });
+    });
+  }
+
+  function closeModal() {
+    document.getElementById('paymentModal').classList.add('hidden');
+    document.getElementById('paymentModal').classList.remove('flex');
+  }
+
+  document.getElementById('monthlyBtn').addEventListener('click', () => {
+    currentType = 'monthly';
+    renderPlans(currentType, subjectFilter.value);
+  });
+
+  document.getElementById('yearlyBtn').addEventListener('click', () => {
+    currentType = 'yearly';
+    renderPlans(currentType, subjectFilter.value);
+  });
+
+  subjectFilter.addEventListener('change', () => {
+    renderPlans(currentType, subjectFilter.value);
+  });
+
+  renderPlans('monthly', 'all');
+</script>
+</body>
+</html>
