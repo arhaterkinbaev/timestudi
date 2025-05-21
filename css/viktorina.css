@@ -1,0 +1,151 @@
+/* Основные стили */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4faff;
+  color: #333;
+  text-align: center;
+}
+
+/* Хедер */
+header {
+  background: linear-gradient(90deg, #4dbcfb, #1ba3e3);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 26px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.categories ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 24px;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.categories a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 17px;
+  transition: opacity 0.3s;
+}
+
+.categories a:hover {
+  opacity: 0.8;
+}
+
+/* Контейнер викторины */
+.quiz-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.quiz-container h2 {
+  color: #1ba3e3;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+/* Вопросы */
+.question {
+  margin-bottom: 20px;
+  text-align: left;
+  background-color: #f8fdff;
+  padding: 15px 20px;
+  border-left: 4px solid #4dbcfb;
+  border-radius: 10px;
+}
+
+.question p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.question input[type="text"],
+.question select {
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* Кнопка */
+button[type="button"] {
+  background-color: #4dbcfb;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 25px;
+}
+
+button[type="button"]:hover {
+  background-color: #1ba3e3;
+}
+
+/* Результат */
+#quiz-result {
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1ba3e3;
+}
+
+/* Футер */
+footer {
+  background: #4dbcfb;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+footer .social-links {
+  margin-top: 12px;
+}
+
+footer .social-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+footer .social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Адаптив */
+@media (max-width: 640px) {
+  .categories ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .quiz-container {
+    margin: 20px;
+    padding: 20px;
+  }
+}
