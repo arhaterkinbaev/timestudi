@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина - EvoTechnology</title>
+    <link rel="stylesheet" href="css/viktorina.css">
+    <script defer src="js/viktorina.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo" onclick="goToHome()">EvoTechnology</div>
+        <nav class="categories">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О проекте</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="quiz-container">
+            <h2>Викторина по электронике</h2>
+            <form id="quiz-form">
+                <div class="question">
+                        <p>1. Какое напряжение стандартное для бытовой электросети?</p>
+                        <input type="radio" name="q1" value="110"> 110 В<br>
+                        <input type="radio" name="q1" value="220"> 220 В<br>
+                        <input type="radio" name="q1" value="380"> 380 В<br>
+                        <input type="radio" name="q1" value="12"> 12 В<br>
+                        <input type="radio" name="q1" value="5"> 5 В<br>
+                    </div>
+                    
+                    <div class="question">
+                        <p>2. Как называется устройство для понижения напряжения?</p>
+                        <input type="checkbox" name="q2" value="диод"> Диод<br>
+                        <input type="checkbox" name="q2" value="резистор"> Резистор<br>
+                        <input type="checkbox" name="q2" value="трансформатор"> Трансформатор<br>
+                        <input type="checkbox" name="q2" value="конденсатор"> Конденсатор<br>
+                        <input type="checkbox" name="q2" value="предохранитель"> Предохранитель<br>
+                    </div>
+                    
+                    <div class="question">
+                        <p>3. В чем измеряется электрическое сопротивление?</p>
+                        <select name="q3">
+                            <option value="Ом">Ом</option>
+                            <option value="Вольт">Вольт</option>
+                            <option value="Ампер">Ампер</option>
+                            <option value="Фарад">Фарад</option>
+                            <option value="Герц">Герц</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question">
+                        <p>4. Как называется положительный электрод?</p>
+                        <input type="text" name="q4" placeholder="Введите ответ">
+                    </div>
+                    
+                    <div class="question">
+                        <p>5. Какой компонент позволяет току течь только в одном направлении?</p>
+                        <input type="radio" name="q5" value="диод"> Диод<br>
+                        <input type="radio" name="q5" value="транзистор"> Транзистор<br>
+                        <input type="radio" name="q5" value="резистор"> Резистор<br>
+                        <input type="radio" name="q5" value="конденсатор"> Конденсатор<br>
+                        <input type="radio" name="q5" value="катушка"> Катушка<br>
+                    </div>
+                    <div class="question">
+                    <p>6. В чем измеряется мощность?</p>
+                    <select name="q6">
+                        <option value="герц">Герц</option>
+                        <option value="ампер">Ампер</option>
+                        <option value="ватт">Ватт</option>
+                        <option value="фарад">Фарад</option>
+                        <option value="вольт">Вольт</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <p>7. Какой компонент ограничивает ток в цепи?</p>
+                    <input type="checkbox" name="q7" value="резистор"> Резистор<br>
+                    <input type="checkbox" name="q7" value="транзистор"> Транзистор<br>
+                    <input type="checkbox" name="q7" value="диод"> Диод<br>
+                    <input type="checkbox" name="q7" value="конденсатор"> Конденсатор<br>
+                    <input type="checkbox" name="q7" value="катушка"> Катушка<br>
+                </div>
+
+                <div class="question">
+                    <p>8. Какой материал чаще всего используется в полупроводниках?</p>
+                    <input type="text" name="q8" placeholder="Введите ответ">
+                </div>
+
+                <div class="question">
+                    <p>9. В чем измеряется емкость аккумулятора?</p>
+                    <select name="q9">
+                        <option value="герц">Герц</option>
+                        <option value="ампер">Ампер</option>
+                        <option value="вольт">Вольт</option>
+                        <option value="мАч">мАч</option>
+                        <option value="ватт">Ватт</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <p>10. Какой тип аккумуляторов чаще всего используется в смартфонах?</p>
+                    <input type="radio" name="q10" value="Литий-ион"> Литий-ион<br>
+                    <input type="radio" name="q10" value="Никель-металлгидрид"> Никель-металлгидрид<br>
+                    <input type="radio" name="q10" value="Литий-полимер"> Литий-полимер<br>
+                    <input type="radio" name="q10" value="Свинцово-кислотный"> Свинцово-кислотный<br>
+                    <input type="radio" name="q10" value="Щелочной"> Щелочной<br>
+                </div>
+                
+                <button type="button" onclick="checkQuiz()">Отправить</button>
+            </form>
+            <p id="quiz-result"></p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 EvoTechnology. Все права защищены.</p>
+        <div class="social-links">
+            <a href="#">VK</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+        </div>
+    </footer>
+</body>
+</html>
